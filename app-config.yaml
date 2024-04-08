@@ -52,7 +52,7 @@ proxy:
     '/circleci/api':
       target: https://circleci.com/api/v1.1
       headers:
-        Circle-Token: CCIPAT_9mF8TZppdGCGCtt4SnX2S3_d15e4dad297607c666fdfb5219c926c2de609940
+        Circle-Token: ${CIRCLE_TOKEN}
   
     '/dynatrace':
       target: 'https://aai35746.apps.dynatrace.com/api/v2'
