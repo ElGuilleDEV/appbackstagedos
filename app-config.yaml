@@ -52,18 +52,19 @@ proxy:
     '/circleci/api':
       target: https://circleci.com/api/v1.1
       headers:
+        #Circle-Token: CCIPAT_9mF8TZppdGCGCtt4SnX2S3_d15e4dad297607c666fdfb5219c926c2de609940
         Circle-Token: ${CIRCLE_TOKEN}
   
     '/dynatrace':
       target: 'https://aai35746.apps.dynatrace.com/api/v2'
       headers:
-        Authorization: 'Api-Token dt0c01.RCJP2Q23YI36J4DSJ3GDBMHW.NVCDIW63HHKXRPFQWGJQF6DXWEUBC4NO6VRIWMA6OCXX7C6VDMONLY4EEFTOLK6S'
+        Authorization: 'Api-Token ${DYNATRACE_AUTH_TOKEN}'
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:
   #   '/test':
   #     target: 'https://example.com'
-  #     changeOrigin: true dt0c01.Z3JX4AX3PIEYHM2AEJVX3HU7.
+  #     changeOrigin: true
 
 # Reference documentation http://backstage.io/docs/features/techdocs/configuration
 # Note: After experimenting with basic setup, use CI/CD to generate docs
