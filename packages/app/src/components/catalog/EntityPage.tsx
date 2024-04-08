@@ -63,6 +63,9 @@ import {
   isCircleCIAvailable,
 } from '@circleci/backstage-plugin';
 
+//Importar Dynatrace
+import { DynatraceTab, isDynatraceAvailable } from '@backstage/plugin-dynatrace'
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -168,6 +171,11 @@ const serviceEntityPage = (
           <EntityConsumedApisCard />
         </Grid>
       </Grid>
+    </EntityLayout.Route>
+
+    {/* Dynatrace */}
+    <EntityLayout.Route path="/dynatrace" title="Dynatrace" if={isDynatraceAvailable}>
+      <DynatraceTab />
     </EntityLayout.Route>
 
     <EntityLayout.Route path="/dependencies" title="Dependencies">

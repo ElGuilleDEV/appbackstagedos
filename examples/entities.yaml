@@ -14,8 +14,9 @@ metadata:
   name: example-website
   annotations:
     circleci.com/project-slug: bitbucket/backstage-prueba/backstage
+    dynatrace.com/dynatrace-entity-id: 864a4bbc-670d-4dac-965c-ed0fde02412e
 spec:
-  type: website
+  type: service
   lifecycle: experimental
   owner: guests
   system: examples
