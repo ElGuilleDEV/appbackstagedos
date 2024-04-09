@@ -15,6 +15,7 @@ metadata:
   annotations:
     circleci.com/project-slug: bitbucket/backstage-prueba/backstage
     dynatrace.com/dynatrace-entity-id: 864a4bbc-670d-4dac-965c-ed0fde02412e
+    dynatrace.com/synthetics-ids: SYNTHETIC_ID, SYNTHETIC_ID_2, ...
 spec:
   type: service
   lifecycle: experimental

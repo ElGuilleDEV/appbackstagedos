@@ -16,6 +16,9 @@ backend:
   # auth:
   #   keys:
   #     - secret: ${BACKEND_SECRET}
+  auth:
+    dangerouslyDisableDefaultAuthPolicy: true
+
   baseUrl: http://localhost:7007
   listen:
     port: 7007
@@ -52,13 +55,12 @@ proxy:
     '/circleci/api':
       target: https://circleci.com/api/v1.1
       headers:
-        #Circle-Token: CCIPAT_9mF8TZppdGCGCtt4SnX2S3_d15e4dad297607c666fdfb5219c926c2de609940
         Circle-Token: ${CIRCLE_TOKEN}
   
     '/dynatrace':
       target: 'https://aai35746.apps.dynatrace.com/api/v2'
       headers:
-        Authorization: 'Api-Token ${DYNATRACE_AUTH_TOKEN}'
+        Authorization: 'Api-Token dt0c01.ZGM3RDIIZE7RUBPI2HNOGM66.2SGHQTDFCIZFGS7EX7IHMTCVOC4MHY5WVQFZYMSMCETNHZTXBL7MCFVTNNBCRVQB' #${DYNATRACE_AUTH_TOKEN}' #Hay que cambiar el token por un JWT
   ### Example for how to add a proxy endpoint for the frontend.
   ### A typical reason to do this is to handle HTTPS and CORS for internal services.
   # endpoints:
@@ -71,7 +73,7 @@ proxy:
 # and an external cloud storage when deploying TechDocs for production use-case.
 # https://backstage.io/docs/features/techdocs/how-to-guides#how-to-migrate-from-techdocs-basic-to-recommended-deployment-approach
 dynatrace:
-  baseUrl: 'https://aai35746.apps.dynatrace.com/'
+  baseUrl: 'https://aai35746.apps.dynatrace.com'
 
 techdocs:
   builder: 'local' # Alternatives - 'external'
