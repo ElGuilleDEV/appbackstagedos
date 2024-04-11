@@ -11,10 +11,10 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: Jose Martin-Forero Royo
+  name: Jose_Martin-Forero_Royo
 spec:
   profile: 
-    displayName: Jose Jefe
+    displayName: Jose Martin-Forero
     email: p-jmartin-forero@neoris.com
     picture: https://avatars.githubusercontent.com/u/166483372?v=4
   memberOf: [Trainees,Developers]
@@ -23,16 +23,24 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: Antonio Perez Nicolas
+  name: Antonio_Perez_Nicolas
 spec:
+  profile: 
+    displayName: Antonio Perez
+    email: antonio.perezn@neoris.com
+    picture: https://avatars.githubusercontent.com/u/143768951?v=4
   memberOf: [Developers]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: Guillermo Quintanar Sánchez
+  name: Guillermo_Quintanar_Sanchez
 spec:
+  profile: 
+    displayName: Guillermo Quintanar
+    email: p-gquintanar@neoris.com
+    picture: https://avatars.githubusercontent.com/u/166483374?v=4
   memberOf: [Trainees,Developers]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
@@ -46,7 +54,7 @@ spec:
   profile:
     picture: https://formacionytalento.files.wordpress.com/2009/06/empresas.jpeg
   children: []
-  members: [Jose Martin-Forero Royo,Guillermo Quintanar Sánchez]
+  members: [Jose_Martin-Forero_Royo, Guillermo_Quintanar_Sanchez]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
@@ -55,8 +63,10 @@ metadata:
   name: Developers
 spec:
   type: team
+  profile:
+    picture: https://developer.mercedes-benz.com/static/img/logo_developers_sharing.jpg
   children: []
-  members: [Jose Martin-Forero Royo,Antonio Perez Nicolas,Guillermo Quintanar Sánchez]
+  members: [Jose_Martin-Forero_Royo,Antonio_Perez_Nicolas, Guillermo_Quintanar_Sanchez]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
