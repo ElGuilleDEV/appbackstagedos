@@ -7,6 +7,57 @@ metadata:
 spec:
   memberOf: [guests]
 ---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Jose Martin-Forero Royo
+spec:
+  profile: 
+    displayName: Jose Jefe
+    email: p-jmartin-forero@neoris.com
+    picture: https://avatars.githubusercontent.com/u/166483372?v=4
+  memberOf: [Trainees,Developers]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Antonio Perez Nicolas
+spec:
+  memberOf: [Developers]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: Guillermo Quintanar Sánchez
+spec:
+  memberOf: [Trainees,Developers]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Trainees
+  description: Grupo de usuarios de alumnos en prácticas
+spec:
+  type: team
+  profile:
+    picture: https://formacionytalento.files.wordpress.com/2009/06/empresas.jpeg
+  children: []
+  members: [Jose Martin-Forero Royo,Guillermo Quintanar Sánchez]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
+  name: Developers
+spec:
+  type: team
+  children: []
+  members: [Jose Martin-Forero Royo,Antonio Perez Nicolas,Guillermo Quintanar Sánchez]
+---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
 apiVersion: backstage.io/v1alpha1
 kind: Group
