@@ -11,7 +11,7 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: example-website
+  name: Componente_de_Prueba
   annotations:
     circleci.com/project-slug: bitbucket/backstage-prueba/backstage
     dynatrace.com/dynatrace-entity-id: 864a4bbc-670d-4dac-965c-ed0fde02412e
@@ -19,19 +19,19 @@ metadata:
 spec:
   type: service
   lifecycle: experimental
-  owner: guests
+  owner: Proyecto_Backstage
   system: examples
-  providesApis: [example-grpc-api]
+  providesApis: [Api-de-Prueba]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-api
 apiVersion: backstage.io/v1alpha1
 kind: API
 metadata:
-  name: example-grpc-api
+  name: Api-de-Prueba
 spec:
   type: grpc
   lifecycle: experimental
-  owner: guests
+  owner: Proyecto_Backstage
   system: examples
   definition: |
     syntax = "proto3";

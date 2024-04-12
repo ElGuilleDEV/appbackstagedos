@@ -72,6 +72,17 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: Group
 metadata:
+  name: Proyecto_Backstage
+spec:
+  type: team
+  profile:
+    picture: https://backstage-spotify-com.spotifycdn.com/_next/static/media/twitter-summary-default.e17fd878.png
+  children: [Developers,Trainees]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group
+apiVersion: backstage.io/v1alpha1
+kind: Group
+metadata:
   name: guests
 spec:
   type: team
