@@ -35,12 +35,24 @@ spec:
 apiVersion: backstage.io/v1alpha1
 kind: User
 metadata:
-  name: Guillermo_Quintanar_Sanchez
+  name: ElGuilleDEV
+spec:
+  profile: 
+    displayName: Guillermo Quintanar
+    email: guilleqdev@gmail.com
+    # picture: https://avatars.githubusercontent.com/u/166483374?v=4
+  memberOf: [Trainees,Developers]
+---
+# https://backstage.io/docs/features/software-catalog/descriptor-format#kind-user
+apiVersion: backstage.io/v1alpha1
+kind: User
+metadata:
+  name: p-gquintanar_neoris
 spec:
   profile: 
     displayName: Guillermo Quintanar
     email: p-gquintanar@neoris.com
-    picture: https://avatars.githubusercontent.com/u/166483374?v=4
+    # picture: https://avatars.githubusercontent.com/u/166483374?v=4
   memberOf: [Trainees,Developers]
 ---
 # https://backstage.io/docs/features/software-catalog/descriptor-format#kind-group

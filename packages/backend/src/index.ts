@@ -32,7 +32,7 @@ backend.add(import('@backstage/plugin-permission-backend/alpha'));
 backend.add(
   import('@backstage/plugin-permission-backend-module-allow-all-policy'),
 );
-
+backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
 // search plugin
 backend.add(import('@backstage/plugin-search-backend/alpha'));
 backend.add(import('@backstage/plugin-search-backend-module-catalog/alpha'));
