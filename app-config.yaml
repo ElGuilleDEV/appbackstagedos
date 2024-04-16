@@ -8,6 +8,15 @@ organization:
 permission:
   enabled: true
 
+#Opa config
+opaClient:
+  baseUrl: 'http://localhost:8181'
+  policies:
+    entityChecker: # Entity checker plugin
+      package: 'entity_checker'
+    permissions: # Permission wrapper plugin
+      entrypoint: 'rbac_policy/decision'
+
 backend:
   # Used for enabling authentication, secret is shared by all backend plugins
   # See https://backstage.io/docs/auth/service-to-service-auth for

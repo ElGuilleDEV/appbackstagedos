@@ -22,6 +22,7 @@ backend.add(import('@backstage/plugin-permission-backend/alpha'));
 backend.add(import('@backstage/plugin-permission-backend-module-allow-all-policy'),
 );
 
+backend.add(import('@parsifal-m/permission-backend-module-opa-wrapper'))
 
 // auth plugin
 backend.add(import('@backstage/plugin-auth-backend'));
