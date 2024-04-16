@@ -39,6 +39,9 @@ import { RequirePermission } from '@backstage/plugin-permission-react';
 import { catalogEntityCreatePermission } from '@backstage/plugin-catalog-common/alpha';
 import { githubAuthApiRef } from '@backstage/core-plugin-api';
 
+//Autologout autenticador
+import { AutoLogout } from '@backstage/core-components';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -121,6 +124,15 @@ export default app.createRoot(
   <>
     <AlertDisplay />
     <OAuthRequestDialog />
+    <AppRouter>
+      <Root>{routes}</Root>
+    </AppRouter>
+    <AutoLogout 
+    idleTimeoutMinutes={15}
+    useWorkerTimers={false}
+    logoutIfDisconnected={false}
+    >
+    </AutoLogout>
     <AppRouter>
       <Root>{routes}</Root>
     </AppRouter>

@@ -79,6 +79,8 @@ techdocs:
     type: 'local' # Alternatives - 'googleGcs' or 'awsS3'. Read documentation for using alternatives.
 
 auth:
+  autologout:
+    enabled: true
   # see https://backstage.io/docs/auth/ to learn about auth providers
   environment: development
   providers:
