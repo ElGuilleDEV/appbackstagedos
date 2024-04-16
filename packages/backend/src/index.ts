@@ -7,6 +7,7 @@
  */
 
 import { createBackend } from '@backstage/backend-defaults';
+// import { DenyCatalogDeletePolicy } from './permissions/policy';
 
 const backend = createBackend();
 
@@ -14,6 +15,13 @@ backend.add(import('@backstage/plugin-app-backend/alpha'));
 backend.add(import('@backstage/plugin-proxy-backend/alpha'));
 backend.add(import('@backstage/plugin-scaffolder-backend/alpha'));
 backend.add(import('@backstage/plugin-techdocs-backend/alpha'));
+
+//Permission 
+backend.add(import('@backstage/plugin-permission-backend/alpha'));
+/* highlight-add-next-line */
+backend.add(import('@backstage/plugin-permission-backend-module-allow-all-policy'),
+);
+
 
 // auth plugin
 backend.add(import('@backstage/plugin-auth-backend'));
@@ -27,11 +35,6 @@ backend.add(
   import('@backstage/plugin-catalog-backend-module-scaffolder-entity-model'),
 );
 
-// permission plugin
-backend.add(import('@backstage/plugin-permission-backend/alpha'));
-backend.add(
-  import('@backstage/plugin-permission-backend-module-allow-all-policy'),
-);
 backend.add(import('@backstage/plugin-auth-backend-module-github-provider'));
 // search plugin
 backend.add(import('@backstage/plugin-search-backend/alpha'));
